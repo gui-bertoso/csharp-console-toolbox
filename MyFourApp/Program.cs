@@ -1,4 +1,4 @@
-﻿namespace MyFourApp;
+namespace MyFourApp;
 
 public static class App
 {
@@ -28,7 +28,7 @@ public static class App
             Console.WriteLine("GiveMeARandomNumber\n");
             Console.ResetColor();
             var randomNumber = new Random().Next(min, max);
-            Console.WriteLine($"The you random number is {randomNumber}\n take all key to new main menu");
+            Console.WriteLine($"Your random number is {randomNumber}\n press any key to return to the main menu");
             Console.ReadKey();
             MainMenu();
         }
@@ -65,7 +65,7 @@ public static class App
                         case "/": result = value1 / value2; break;
                     }
 
-                    Console.WriteLine($"The result is {result}\n take all key to new calculate!");
+                    Console.WriteLine($"The result is {result}\n press any key to calculate again!");
                     Console.ReadKey();
                 }
             }
@@ -81,7 +81,7 @@ public static class App
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Welcome to my study console project :)");
         Console.ResetColor();
-        Console.WriteLine("\nPlease select a tool to use\n [1] This number it's par?\n [2] Give me a random number\n [3] Calculator");
+        Console.WriteLine("\nPlease select a tool to use\n [1] Is this number even?\n [2] Give me a random number\n [3] Calculator");
         Console.Write("\nR: ");
         var input = Console.ReadLine();
         switch (input)
@@ -105,7 +105,7 @@ public static class App
             
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("ThisNumberIsPar?\n");
+            Console.WriteLine("Is this number even?\n");
             Console.ResetColor();
             Console.Write("Insert number: ");
             var input = Console.ReadLine();
@@ -117,11 +117,11 @@ public static class App
             {
                 if (input != null && int.Parse(input) % 2 == 0)
                 {
-                    Console.WriteLine($"the number {input} it's par");
+                    Console.WriteLine($"the number {input} is even");
                 }
                 else
                 {
-                    Console.WriteLine($"the number {input} it's impar");
+                    Console.WriteLine($"the number {input} is odd");
                 }
 
                 Task.Delay(1000).Wait();
